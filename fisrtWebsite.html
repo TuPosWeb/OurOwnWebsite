@@ -1,103 +1,149 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Page Title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <style>
-            body {
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        </style>
-    </head>
+<head>
+<title>Tu Positive Media</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
 
-    <body>
-        <div class="header">
-            <h1>My Website</h1>
-            <p>A website created by me.</p>
-        </div>
+/* Style the body */
+body {
+    font-family: Arial;
+    margin: 0;
+}
 
-        <div class="navbar">
-            <a href="#">Link</a>
-            <a href="#">Link</a>
-            <a href="#">Link</a>
-            <a href="#" class="right">Link</a>
-        </div>
+/* Header/logo Title */
+.header {
+    padding: 80px;
+    text-align: center;
+    background: #ced51e;
+    color: white;
+}
 
-	<div class="row">
-	    <div class="side">...</div>
-  	    <div class="main">...</div>
-	</div>
+/* Increase the font size of the heading */
+.header h1 {
+    font-size: 55px;
+}
 
-	<div class="footer">
-  	    <h2>Footer</h2>
-	</div> 
-	
-        <style> 
-            .header {
-                padding: 80px;
-                text-align: center;
-                background: #1abc9c;
-                color: white;
-            }
+.header p {
+    font-size: 15px;
+    color: black;
+}
 
-	    .header h1 {
-                font-size: 40px;
-            }
+/* Style the top navigation bar */
+.navbar {
+    overflow: hidden;
+    background-color: black;
+}
 
-	    .navbar a {
-    		float: left;
-    		display: block;
-          	color: white;
-    	        text-align: center;
-                padding: 14px 20px;
-                text-decoration: none;
-            }
+/* Style the navigation bar links */
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
 
-	    .navbar a.right {
-    	        float: right;
-	    }
+/* Right-aligned link */
+.navbar a.right {
+    float: right;
+}
 
-	    .navbar a:hover {
-    		background-color: #ddd;
-    		color: black;
-	    }
+/* Change color on hover */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
 
-	    .row {
-    		display: flex;
-    		flex-wrap: wrap;
-	    }
+/* Column container */
+.row {  
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+}
 
-	    .side {
-    		flex: 30%;
-    		background-color: #f1f1f1;
-    		padding: 20px;
-	    }
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+    -ms-flex: 30%; /* IE10 */
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
 
-	    .main {
-    		flex: 70%;
-    		background-color: white;
-    		padding: 20px;
-	    }
+/* Main column */
+.main {   
+    -ms-flex: 70%; /* IE10 */
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+}
 
-	    @media (max-width: 700px) {
-    		.row {
-        	    flex-direction: column;
-    		}
-	    }
+/* Fake image, just for this example */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
 
-	    @media (max-width: 400px) {
-    		.navbar a {
-        	    float: none;
-        	    width: 100%;
-    	        }
-	    }
-	    
-            .footer {
-   		padding: 20px; /* Some padding */
-                text-align: center; /* Center text*/
-    		background: #ddd; /* Grey background */
-	    }
-        </style>
-    </body>
-</html> 
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media (max-width: 700px) {
+    .row {   
+        flex-direction: column;
+    }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media (max-width: 400px) {
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Tu Positive Media</h1>
+  <p>Websites, Apps, Coding and more...</p>
+</div>
+
+<div class="navbar">
+  <a href="#">About Us</a>
+  <a href="#">Our Work</a>
+  <a href="#" class="right">Contact Us</a>
+</div>
+
+<div class="row">
+  <div class="main">
+      <h2>About Us :</h2>
+      <p>write some thing about us.</p>
+      <br>
+      <h2>Our Work :</h2>
+      <p>write some things about what we do.</p>
+      <br>
+      <h2>Contact Us :</h2>
+      <p>write about how to contact us.</p>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Footer</h2>
+</div>
+
+</body>
+</html>
